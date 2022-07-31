@@ -1,5 +1,5 @@
 import UnitOfWork from "@core/contract/UnitOfWork";
-import ControllerFactory from "@core/factory/ControllerFactory";
+import ControllerFactory from "@core/contract/ControllerFactory";
 import IAuthApi from "@core/network/api/IAuthApi";
 import IUserApi from "@core/network/api/IUserApi";
 import IAuthRepo from "@core/network/repository/IAuthRepo";
@@ -22,12 +22,7 @@ class AppContainer {
     return this.INSTANCE;
   }
 
-
-  // properties
-  private unitOfWork: IUnitOfWork;
-
   private controllerFactory: ControllerFactory;
-
 
   constructor() {
 
@@ -42,7 +37,7 @@ class AppContainer {
       authRepo
     );
 
-    this.controllerFactory = new ControllerFactory(this.unitOfWork);
+    this.controllerFactory = new ControllerFactory(unitOfWork);
 
   }
 
@@ -51,7 +46,6 @@ class AppContainer {
   public getControllers(): ControllerFactory {
     return this.controllerFactory;
   }
-
 
 }
 

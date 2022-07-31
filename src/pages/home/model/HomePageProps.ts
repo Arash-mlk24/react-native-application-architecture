@@ -1,5 +1,5 @@
 import IHomeController from "@core/controller/IHomeController";
-import HomeStyles from "../styles/HomeStyles";
+import HomeStyles from "../HomeStyles";
 
 export default interface HomePageProps {
   controller: IHomeController;

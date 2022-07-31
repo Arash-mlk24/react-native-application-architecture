@@ -1,3 +1,4 @@
+import AppError from '@common/error/AppError'
 import React, { useState } from 'react'
 import { ToastAndroid } from 'react-native'
 import HomePageContent from './HomePageContent'
@@ -14,13 +15,13 @@ const HomePage = ({
   const getUserInfo = () => {
     controller.getName(2)
       .then(data => {
-        setName(data)
+        setName(data);
       })
-      // .catch((error: AppError) => {
-
-      // })
+      .catch((error: AppError) => {
+        ToastAndroid.show(error.message, 3000);
+      })
       .catch((error) => {
-        ToastAndroid.show('hi', 3000)
+        ToastAndroid.show('hi', 3000);
       })
   }
 

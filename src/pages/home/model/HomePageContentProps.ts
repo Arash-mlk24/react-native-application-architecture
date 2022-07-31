@@ -1,4 +1,4 @@
-import HomeStyles from "../styles/HomeStyles";
+import HomeStyles from "../HomeStyles";
 
 export default interface HomePageContentProps {
   processing: boolean;

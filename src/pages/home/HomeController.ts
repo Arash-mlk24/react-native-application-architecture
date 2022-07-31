@@ -16,7 +16,9 @@ export default class HomeController extends BaseController implements IHomeContr
   }
 
   getName(id: number): Promise<string> {
+
     return this.unitOfWork.getUserRepo().getUserName(id);
+
   }
 
 }
