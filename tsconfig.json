@@ -10,6 +10,9 @@
       "@core/*": [
         "./src/core/*"
       ],
+      "@navigation/*": [
+        "./src/navigation/*"
+      ],
       "@pages/*": [
         "./src/pages/*"
       ],

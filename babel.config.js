@@ -19,6 +19,7 @@ module.exports = {
         alias: {
           '@components': ['./src/components'],
           '@core': ['./src/core'],
+          '@navigation': ['./src/navigation'],
           '@pages': ['./src/pages'],
           '@common': ['./src/framework/common'],
           '@network': ['./src/framework/network']

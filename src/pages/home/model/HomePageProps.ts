@@ -1,7 +1,9 @@
-import IHomeController from "@core/controller/IHomeController";
-import HomeStyles from "../HomeStyles";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import MainAppNavigationParamsList from "@navigation/model/MainAppNavigationParamsList";
 
-export default interface HomePageProps {
-  controller: IHomeController;
-  styles: HomeStyles;
-}
+type HomePageProps = NativeStackScreenProps<
+  MainAppNavigationParamsList,
+  'HomePage'
+>;
+
+export default HomePageProps;
